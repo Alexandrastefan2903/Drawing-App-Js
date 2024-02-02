@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Program de desenare raster folosind elementul canvas</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Adaugă această secțiune în corpul HTML -->
+<div class="figure-list">
+  <h3>Figuri:</h3>
+  <ul id="figure-list-container"></ul>
+</div>
+
+    <div class="container">
+      <section class="tools-board">
+        <div class="column">
+          <div class="row">
+            <label class="title">Forme:</label>
+            <ul class="options">
+              <li class="option tool" id="rectangle">
+                <img src="dreptunghi.png" alt="" width="20px" height="20px">
+                <span>Dreptunghi</span>
+              </li>
+              <li class="option tool" id="elipsa">
+                <img src="elipsa.png" alt="" width="20px" height="20px">
+                <span>Elipsă</span>
+              </li>
+              <li class="option tool" id="linie">
+                <img src="linie.png" alt="" width="20px" height="20px">
+                <span>Linie</span>
+              </li>
+              <li class="option">
+                <input type="checkbox" id="fill-color">
+                <label for="fill-color">Forma plină</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="row">
+            <label class="title">Opțiuni:</label>
+            <ul class="options">
+              <li class="option active tool" id="brush">
+                <img src="pensula.png" alt="" width="20px" height="20px">
+                <span>Pensulă</span>
+              </li>
+              <li class="option tool" id="eraser">
+                <img src="radiera.png" alt="" width="20px" height="20px">
+                <span>Radieră</span>
+              </li>
+              <li class="option">
+                <input type="range" id="size-slider" min="1" max="50" value="10">
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row colors">
+          <label class="title">Alege culoarea:</label>
+          <input type="color" id="color-picker">
+        </div>
+        <div class="row buttons">
+          <div class="button-container">
+            <button class="change-background">Colorează Fundal</button>
+            <button class="clear-canvas">Șterge desenul</button>
+          </div>
+          <div class="button-container">
+            <button class="save-img">Salvează imaginea</button>
+            <button class="export-svg-button">Export SVG</button>
+            <button id="delete-figure">Șterge figură</button>
+
+          </div>
+        </div>
+      </section>
+      <section class="drawing-board">
+        <canvas></canvas>
+      </section>
+    </div>
+    
+  </body>
+</html>
